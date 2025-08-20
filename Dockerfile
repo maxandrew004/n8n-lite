@@ -1,11 +1,14 @@
-# Gunakan image resmi n8n
-FROM n8nio/n8n:latest
+# Gunakan Node.js LTS
+FROM node:18-alpine
 
-# Set working directory
-WORKDIR /data
+# Set working dir
+WORKDIR /app
 
-# Expose port (n8n default: 5678)
+# Install n8n
+RUN npm install -g n8n
+
+# Expose port
 EXPOSE 5678
 
-# Jalankan n8n
-CMD ["n8n"]
+# Start n8n
+CMD ["n8n", "start"]
