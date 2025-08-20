@@ -1,14 +1,7 @@
-# Gunakan Node.js LTS
-FROM node:18-alpine
+FROM n8nio/n8n:latest
 
-# Set working dir
-WORKDIR /app
+# optional: set timezone
+ENV GENERIC_TIMEZONE="Asia/Jakarta"
 
-# Install n8n
-RUN npm install -g n8n
-
-# Expose port
+# expose port n8n
 EXPOSE 5678
-
-# Start n8n
-CMD ["n8n", "start"]
