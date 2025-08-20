@@ -1,10 +1,10 @@
 # Gunakan image resmi n8n
 FROM n8nio/n8n:latest
 
-# Tentukan working directory
+# Set working directory
 WORKDIR /data
 
-# Expose port
+# Expose port (n8n default: 5678)
 EXPOSE 5678
 
 # Jalankan n8n
