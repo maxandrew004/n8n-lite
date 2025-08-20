@@ -1,8 +1,11 @@
-# Dockerfile — gunakan image resmi n8n (no build, fast)
+# Gunakan image resmi n8n
 FROM n8nio/n8n:latest
 
+# Tentukan working directory
 WORKDIR /data
+
+# Expose port
 EXPOSE 5678
 
-# default command sudah di image, tapi pastikan start
-CMD ["n8n", "start", "--tunnel"]
+# Jalankan n8n
+CMD ["n8n"]
